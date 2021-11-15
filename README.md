@@ -7,3 +7,4 @@ Unsigned integers (4 bytes) are used for all data types as the addresses, page n
 Example of a 32-bit virtual address converted into page number and offsett (with a 4 KB page size): <br/>
 
 ![image](https://user-images.githubusercontent.com/60248071/141734043-0ad13cca-5315-4190-b942-c014e4d61ef3.png)
+<br/> The address 19986 is provided to the program which translates into a page number of 4 and an offset of 3602 since {4*1024(4 KB)*4(page number) + 3602 (offset) = 19986 } 
