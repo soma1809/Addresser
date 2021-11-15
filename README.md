@@ -3,6 +3,8 @@ This is the C code for converting a 32-bit virtual address with a 4 KB page size
 The input is a 32-bit virtual address passed (as a decimal nubmer to the program) as a command line argument. <br/>
 The program translates the 32-bit virtual address into a page number (with page size 4 KB) and and offset. <br/>
 Unsigned integers (4 bytes) are used for all data types as the addresses, page numbers and offsets are positive. <br/>
+The page number is stored in the most significant 20 bits of the virtual address. Thus, it is obtained using bit shift (by 12 bits) to the right.<br/>
+The offset is stored in the least significant 12 bits. Thus, this is obtained by masking the upper 20 bits (Bitwise AND with 0x00000FFF)
 
 Example of a 32-bit virtual address converted into page number and offsett (with a 4 KB page size): <br/>
 
